@@ -396,7 +396,7 @@ module.exports =
 	  switch (true) {
 	    case req.get('host') === 'lion-share.bbcrewind.co.uk':
 	      return Object.assign(defaultConfig, {
-	        title: 'Lion',
+	        title: 'The Queen & I',
 	        description: 'A life of service: discover your personalised journey through the life of her Majesty the Queen.',
 	        image: 'http://ichef.bbci.co.uk/images/ic/raw/p059kztq.jpg',
 	        redirect: 'http://lion-static-dev.bbcrewind.co.uk/?' + (__webpack_require__(8).parse(req.url).query || '')
