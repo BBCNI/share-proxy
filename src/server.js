@@ -18,5 +18,7 @@ server.get('/', (req, res) => {
   }));
 });
 
-server.listen(process.env.port || 3071);
-console.log('listening');
+const port = process.env.port || 3071;
+
+server.listen(port);
+console.log('listening', port, Date.now());

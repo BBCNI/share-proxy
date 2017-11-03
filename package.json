@@ -7,6 +7,7 @@
     "start:dev": "webpack && node dist/server",
     "start": "node dist/server",
     "build": "webpack",
+    "deploy": "npm run build && eb deploy",
     "watch": "npm-watch start:dev"
   },
   "watch": {
