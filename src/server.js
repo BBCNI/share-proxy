@@ -18,5 +18,5 @@ server.get('/', (req, res) => {
   }));
 });
 
-server.listen(3071);
+server.listen(process.env.port || 3071);
 console.log('listening');
