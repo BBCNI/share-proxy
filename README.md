@@ -12,6 +12,7 @@ http://share-proxy.9rigwt4tr9.eu-west-1.elasticbeanstalk.com/
 Share this URL for BBC Defaults, but using with a different image:
 http://share-proxy.9rigwt4tr9.eu-west-1.elasticbeanstalk.com/?image=https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg
 
+Share proxy will redirect real users to the intended site, including querystring parameters.
 ### Supported Querystring Options
 - title
 - description
