@@ -4,8 +4,10 @@
   "description": "share-proxy",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node dist/server",
-    "watch": "npm-watch start"
+    "start:dev": "webpack && node dist/server",
+    "start": "node dist/server",
+    "build": "webpack",
+    "watch": "npm-watch start:dev"
   },
   "watch": {
     "start": "src/*.js"
