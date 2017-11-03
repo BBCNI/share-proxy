@@ -402,7 +402,7 @@ module.exports =
 	        redirect: 'http://lion-static-dev.bbcrewind.co.uk/'
 	      }, req.query);
 	    default:
-	      return defaultConfig;
+	      return Object.assign(defaultConfig, req.query);
 	  }
 	};
 
