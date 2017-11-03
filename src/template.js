@@ -8,7 +8,6 @@ export default ({ body, siteConfig }) => {
         <meta name="twitter:card" content="${siteConfig.twitterCard}" />
         <meta name="twitter:site" content="${siteConfig.twitterUsername}" />
         <meta name="twitter:creator" content="${siteConfig.twitterCreator}" />
-        <meta property="og:url" content="${siteConfig.url}" />
         <meta property="og:title" content="${siteConfig.title}" />
         <meta property="og:description" content="${siteConfig.description}" />
         <meta property="og:image" content="${siteConfig.image}" />

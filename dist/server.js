@@ -368,12 +368,12 @@ module.exports =
 	  var body = _ref.body,
 	      siteConfig = _ref.siteConfig;
 
-	  return "\n    <!DOCTYPE html>\n    <html>\n    \n      <head>\n        <title>" + siteConfig.title + "</title>\n        <meta name=\"twitter:card\" content=\"" + siteConfig.twitterCard + "\" />\n        <meta name=\"twitter:site\" content=\"" + siteConfig.twitterUsername + "\" />\n        <meta name=\"twitter:creator\" content=\"" + siteConfig.twitterCreator + "\" />\n        <meta property=\"og:url\" content=\"" + siteConfig.url + "\" />\n        <meta property=\"og:title\" content=\"" + siteConfig.title + "\" />\n        <meta property=\"og:description\" content=\"" + siteConfig.description + "\" />\n        <meta property=\"og:image\" content=\"" + siteConfig.image + "\" />\n      </head>\n      \n      <script>\n      window.location.replace(\"" + siteConfig.redirect + "\")\n      </script>\n      \n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n    </html>\n  ";
+	  return "\n    <!DOCTYPE html>\n    <html>\n    \n      <head>\n        <title>" + siteConfig.title + "</title>\n        <meta name=\"twitter:card\" content=\"" + siteConfig.twitterCard + "\" />\n        <meta name=\"twitter:site\" content=\"" + siteConfig.twitterUsername + "\" />\n        <meta name=\"twitter:creator\" content=\"" + siteConfig.twitterCreator + "\" />\n        <meta property=\"og:title\" content=\"" + siteConfig.title + "\" />\n        <meta property=\"og:description\" content=\"" + siteConfig.description + "\" />\n        <meta property=\"og:image\" content=\"" + siteConfig.image + "\" />\n      </head>\n      \n      <script>\n      window.location.replace(\"" + siteConfig.redirect + "\")\n      </script>\n      \n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n    </html>\n  ";
 	};
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -384,27 +384,33 @@ module.exports =
 	// Maps a request object to a site configuration
 	exports.default = function (req) {
 	  var defaultConfig = {
-	    url: 'http://www.bbc.co.uk',
 	    title: 'BBC',
 	    description: 'The best of the BBC, with the latest news and sport headlines, weather, TV & radio highlights and much more from across the whole of BBC Online.',
 	    image: '',
 	    twitterUsername: '@bbc',
 	    twitterCreator: '@bbc',
 	    twitterCard: 'summary_large_image',
-	    redirect: 'http://www.bbc.co.uk'
+	    redirect: 'http://www.bbc.co.uk?' + (__webpack_require__(8).parse(req.url).query || '')
 	  };
 
 	  switch (true) {
-	    case req.get('host') === 'localhost:3071':
+	    case req.get('host') === 'lion-share.bbcrewind.co.uk':
 	      return Object.assign(defaultConfig, {
 	        title: 'Lion',
-	        image: 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg',
-	        redirect: 'http://lion-static-dev.bbcrewind.co.uk/'
+	        description: 'A life of service: discover your personalised journey through the life of her Majesty the Queen.',
+	        image: 'http://ichef.bbci.co.uk/images/ic/raw/p059kztq.jpg',
+	        redirect: 'http://lion-static-dev.bbcrewind.co.uk/?' + (__webpack_require__(8).parse(req.url).query || '')
 	      }, req.query);
 	    default:
 	      return Object.assign(defaultConfig, req.query);
 	  }
 	};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	module.exports = require("url");
 
 /***/ })
 /******/ ]);
