@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>hello world {this.props.siteConfig}</h1>
+        <a href={this.props.redirect}>Continue to Site</a>
       </div>
     );
   }

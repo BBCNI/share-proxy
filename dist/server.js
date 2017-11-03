@@ -340,10 +340,9 @@ module.exports =
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'hello world ',
-	          this.props.siteConfig
+	          'a',
+	          { href: this.props.redirect },
+	          'Continue to Site'
 	        )
 	      );
 	    }
