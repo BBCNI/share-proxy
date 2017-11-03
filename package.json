@@ -4,14 +4,8 @@
   "description": "share-proxy",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack && node dist/server",
     "start": "node dist/server",
-    "build": "webpack",
-    "deploy": "npm run build && eb deploy",
-    "watch": "npm-watch start:dev"
-  },
-  "watch": {
-    "start": "src/*.js"
+    "build": "webpack"
   },
   "author": "ryanmccombe@gmail.com",
   "devDependencies": {
@@ -21,7 +15,6 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "npm-watch": "^0.3.0",
     "webpack": "^1.13.1",
     "webpack-node-externals": "^1.2.0"
   },
