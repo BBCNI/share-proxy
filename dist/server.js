@@ -84,8 +84,10 @@ module.exports =
 	  }));
 	});
 
-	server.listen(process.env.port || 3071);
-	console.log('listening');
+	var port = process.env.port || 3071;
+
+	server.listen(port);
+	console.log('listening', port, Date.now());
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
