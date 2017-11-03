@@ -1,0 +1,30 @@
+{
+  "name": "share-proxy",
+  "version": "1.0.0",
+  "description": "share-proxy",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && node dist/server",
+    "watch": "npm-watch start"
+  },
+  "watch": {
+    "start": "src/*.js"
+  },
+  "author": "ryanmccombe@gmail.com",
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "npm-watch": "^0.3.0",
+    "webpack": "^1.13.1",
+    "webpack-node-externals": "^1.2.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0"
+  }
+}
